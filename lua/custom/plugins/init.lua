@@ -2,4 +2,10 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  'marekmaskarinec/vim-umka',
+  'leafo/moonscript-vim',
+  'lluchs/vim-wren',
+  'sputnick1124/uiua.vim',
+  'andweeb/presence.nvim',
+}
