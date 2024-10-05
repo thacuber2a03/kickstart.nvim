@@ -8,4 +8,6 @@ return {
   'lluchs/vim-wren',
   'sputnick1124/uiua.vim',
   'andweeb/presence.nvim',
+  'nvim-treesitter/nvim-treesitter-context',
+  'nvim-treesitter/nvim-treesitter-textobjects',
 }
