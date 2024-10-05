@@ -851,7 +851,6 @@ require('lazy').setup({
     'bluz71/vim-moonfly-colors',
     name = 'moonfly',
     priority = 1000,
-    lazy = false,
     init = function()
       vim.g.moonflyCursorColor = true
       vim.g.moonflyTransparent = true
