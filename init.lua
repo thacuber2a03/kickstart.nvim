@@ -438,6 +438,7 @@ require('lazy').setup({
   },
 
   -- LSP Plugins
+  --[[ I don't change my config that often, with that much minutiae
   {
     -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
     -- used for completion, annotations and signatures of Neovim apis
@@ -451,6 +452,7 @@ require('lazy').setup({
     },
   },
   { 'Bilal2453/luvit-meta', lazy = true },
+  --]]
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
@@ -848,15 +850,15 @@ require('lazy').setup({
   --]]
 
   {
-    'bluz71/vim-moonfly-colors',
-    name = 'moonfly',
+    'rebelot/kanagawa.nvim',
+    lazy = false,
     priority = 1000,
+    opts = {
+      transparent = true,
+      dimInactive = true,
+    },
     init = function()
-      vim.g.moonflyCursorColor = true
-      vim.g.moonflyTransparent = true
-      vim.g.moonflyUnderlineMatchParen = true
-      vim.g.moonflyVirtualTextColor = true
-      vim.g.moonflyWinSeparator = 2
+      vim.cmd.colorscheme 'kanagawa-wave'
       vim.opt.fillchars = { horiz = '━', horizup = '┻', horizdown = '┳', vert = '┃', vertleft = '┫', vertright = '┣', verthoriz = '╋' }
     end,
   },
@@ -940,7 +942,7 @@ require('lazy').setup({
   --
   require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
-  require 'kickstart.plugins.lint',
+  -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
@@ -972,28 +974,6 @@ require('lazy').setup({
     },
   },
 })
-
---  ○ base16-nvim
---  ○ Comment.nvim
---  ○ indent-blankline.nvim
---  ○ mason-nvim-dap.nvim
---  ○ moonfly
---  ○ moonscript-vim
---  ○ neo-tree.nvim
---  ○ neodev.nvim
---  ○ nui.nvim
---  ○ nvim-autopairs
---  ○ nvim-dap
---  ○ nvim-dap-go
---  ○ nvim-dap-lldb
---  ○ nvim-dap-ui
---  ○ nvim-nio
---  ○ nvim-treesitter-context
---  ○ presence.nvim
---  ○ rainbow-delimiters.nvim
---  ○ uiua.vim
---  ○ vim-umka
---  ○ vim-wren
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
